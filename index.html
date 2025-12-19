@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сюрприз</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 20px 40px;
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d6d;
+      color: white;
+    }
+
+    video {
+      display: none;
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn">жмякни</button>
+
+  <video id="video" controls>
+    <source src="video.mp4" type="video/mp4">
+    Твой браузер не поддерживает видео
+  </video>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const video = document.getElementById('video');
+
+    btn.onclick = () => {
+      btn.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+    };
+  </script>
+
+</body>
+</html>
